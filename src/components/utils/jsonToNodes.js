@@ -1,6 +1,6 @@
 let nodeCounter = 0;
 
-export function jsonToNode(jsonData) {
+export function jsonToNodes(jsonData) {
   nodeCounter = 0;
   const nodes = [];
   const edges = [];

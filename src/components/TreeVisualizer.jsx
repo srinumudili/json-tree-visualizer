@@ -9,14 +9,32 @@ import {
 import { useEffect } from "react";
 import "@xyflow/react/dist/style.css";
 
-const TreeVisualizer = ({ nodes = [], edges = [] }) => {
+const TreeVisualizer = ({ nodes = [], edges = [], highlightPath }) => {
   const [rfNodes, setRfNodes, onNodesChange] = useNodesState(nodes);
   const [rfEdges, setRfEdges, onEdgesChange] = useEdgesState(edges);
 
   useEffect(() => {
-    setRfNodes(nodes);
+    setRfNodes(
+      nodes.map((node) => {
+        const isHighlighted =
+          highlightPath &&
+          (node.data.path === highlightPath ||
+            node.data.path.replace("$.", "") ===
+              highlightPath.replace("$.", ""));
+
+        return {
+          ...node,
+          style: {
+            ...node.style,
+            boxShadow: isHighlighted
+              ? "0 0 0 4px rgba(99,102,241,0.5)"
+              : "none",
+          },
+        };
+      })
+    );
     setRfEdges(edges);
-  }, [nodes, edges, setRfNodes, setRfEdges]);
+  }, [nodes, edges, highlightPath, setRfNodes, setRfEdges]);
 
   return (
     <div className="w-full h-[600px] bg-white border rounded-xl shadow-sm">
