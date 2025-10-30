@@ -37,7 +37,7 @@ const TreeVisualizer = ({ nodes = [], edges = [], highlightPath }) => {
   }, [nodes, edges, highlightPath, setRfNodes, setRfEdges]);
 
   return (
-    <div className="w-full h-[600px] bg-white border rounded-xl shadow-sm">
+    <div className="w-full h-[600px] rounded-xl shadow-sm border-gray-200 dark:border-gray-700 bg-linear-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-600 transition-colors">
       <ReactFlow
         nodes={rfNodes}
         edges={rfEdges}

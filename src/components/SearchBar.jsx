@@ -29,7 +29,7 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div className="w-full flex flex-col md:flex-row gap-3 items-center p-3 bg-white border rounded-xl shadow-sm">
+    <div className="w-full flex flex-col md:flex-row gap-3 items-center p-3 border rounded-xl shadow-sm border-gray-200 dark:border-gray-700 bg-linear-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 transition-colors">
       <input
         type="text"
         placeholder="Enter JSON path e.g. $.user.address.city"
