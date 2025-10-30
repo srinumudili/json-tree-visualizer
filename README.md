@@ -1,16 +1,41 @@
-# React + Vite
+# JSON Tree Visualizer 🌳
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web app that visualizes JSON data as an interactive hierarchical tree using **React Flow**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## React Compiler
+🔗 [View Live on Vercel](https://json-tree-visualizer-lime-kappa.vercel.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧠 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✅ Paste or type JSON input  
+✅ Validate JSON (error message for invalid syntax)  
+✅ Visualize JSON as a connected tree  
+✅ Highlight different node types (Object / Array / Primitive)  
+✅ Search by JSON Path (e.g., `$.user.address.city`)  
+✅ Highlight and center the matched node
+
+---
+
+## 🧩 Tech Stack
+
+- React.js (Vite)
+- Tailwind CSS
+- React Flow
+- React Hot Toast
+- HTML-to-Image (for PNG export)
+
+---
+
+## 🛠️ Setup & Run Locally
+
+```bash
+git clone https://github.com/srinumudili/json-tree-visualizer.git
+cd json-tree-visualizer
+npm install
+npm run dev
+```
